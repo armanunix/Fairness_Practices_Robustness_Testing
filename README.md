@@ -1,4 +1,15 @@
 # Fairness_Practices_Robustness_Testing
+# Requirments
+Python Requirments:
+matplotlib==3.10.3
+scikit_learn==1.7.0
+tensorflow_probability==0.25.0
+pandas==2.3.1
+mahalanobis==1.2.0
+tensorflow==2.19.0
+R Requirments:
+pcalg==2.7-12
+rstan==2.32.7
 
 
 #  Causal Discovery
