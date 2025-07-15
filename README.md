@@ -5,7 +5,7 @@ This paper presents a causal framework for evaluating the robustness of machine 
 # Structure of the repository
 
 [Adult_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Adult_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Adult dataset.
-[Bank_Analysis]([https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Adult_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Bank_Analysis)): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Bank dataset.
+[Bank_Analysis]([https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Adult_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Bank_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Bank dataset.
 # Requirments
 Python Requirments:
 
