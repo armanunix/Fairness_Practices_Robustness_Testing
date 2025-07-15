@@ -20,6 +20,7 @@ pcalg==2.7-12
 
 rstan==2.32.7
 
+Rgraphviz==2.52.0
 
 #  Causal Discovery
 
