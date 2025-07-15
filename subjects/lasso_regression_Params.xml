@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+ <inputs>
+  <!--alpha -->
+  <param0>
+   <name>alpha</name>
+   <type>float</type>
+   <min>0.0</min>
+   <max>10.0</max>
+   <def>1.0</def>
+  </param0>
+  <!--fit_intercept --> 
+  <param1>
+   <name>fit_intercept</name>
+   <type>bool</type>
+   <min>0</min>
+   <max>1</max>
+   <def>1</def>
+  </param1>
+  <!--precompute -->
+  <param2>
+   <name>precompute</name>
+   <type>bool</type>
+   <min>0</min>
+   <max>1</max>
+   <def>0</def>
+  </param2>
+  <!--copy_X -->
+  <param3>
+   <name>copy_X</name>
+   <type>bool</type>
+   <min>0</min>
+   <max>1</max>
+   <def>1</def>
+  </param3>
+  <!--max_iter -->
+  <param4>
+   <name>max_iter</name>
+   <type>int</type>
+   <min>100</min>
+   <max>2000</max>
+   <def>1000</def>
+  </param4>
+  <!--tol -->
+  <param5>
+   <name>tol</name>
+   <type>float</type>
+   <min>0.0</min>
+   <max>1.0</max>
+   <def>0.0001</def>
+  </param5>
+  <!--warm_start-->
+  <param6>
+   <name>warm_start</name>
+   <type>bool</type>
+   <min>0</min>
+   <max>1</max>
+   <def>0</def>
+  </param6>
+  <!--positive -->
+  <param7>
+   <name>positive</name>
+   <type>bool</type>
+   <min>0</min>
+   <max>1</max>
+   <def>0</def>
+  </param7> 
+  <!--random_state-->
+  <param8>
+   <name>random_state</name>
+   <type>int</type>
+   <min>0</min>
+   <max>1</max>
+   <def>0</def>
+   <valtrans>None</valtrans>
+   <valtrans>int</valtrans>
+  </param8>
+  <!--selection -->
+  <param9>
+   <name>selection</name>
+   <type>int</type>
+   <min>0</min>
+   <max>1</max>
+   <def>0</def>
+   <valtrans>cyclic</valtrans>
+   <valtrans>random</valtrans>
+  </param9>
+</inputs>

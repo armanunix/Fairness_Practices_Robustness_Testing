@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+ <inputs>
+ <!--constraints -->
+  <param0>
+    <name>constraints</name>
+    <type>int</type>
+    <min>0</min>
+    <max>0</max>
+    <def>0</def>
+    <valtrans>equalized_odds</valtrans>
+  </param0>
+  <!--objective -->
+  <param1>
+    <name>objective</name>
+    <type>int</type>
+    <min>0</min>
+    <max>0</max>
+    <def>0</def>
+    <valtrans>accuracy_score</valtrans>
+  </param1>
+  <!--grid_size -->
+  <param2>
+    <name>grid_size</name>
+    <type>int</type>
+    <min>100</min>
+    <max>2000</max>
+    <def>1000</def>
+  </param2>
+  <!--flip -->
+  <param3>
+    <name>flip</name>
+    <type>bool</type>
+    <min>0</min>
+    <max>1</max>
+    <def>0</def>
+  </param3>
+  <!--prefit -->
+  <param4>
+    <name>prefit</name>
+    <type>bool</type>
+    <min>0</min>
+    <max>1</max>
+    <def>0</def>ef>
+  </param4>
+  <!--predict_method-->
+  <param5>
+    <name>predict_method</name>
+    <type>int</type>
+    <min>0</min>
+    <max>3</max>
+    <def>0</def>
+    <valtrans>auto</valtrans>
+    <valtrans>predict_proba</valtrans>
+    <valtrans>decision_function</valtrans>
+    <valtrans>predict</valtrans>
+   </param5>
+</inputs>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+ <inputs>
+  <!--eps of ExponentiatedGradient -->
+ <param0>
+   <name>eps</name>
+   <type>float</type>
+   <min>0.001</min>
+   <max>0.1</max>
+   <def>0.01</def>
+ </param0>
+ <!--max_iter of ExponentiatedGradient -->
+ <param1>
+  <name>max_iter</name>
+  <type>int</type>
+  <min>20</min>
+  <max>200</max>
+  <def>100</def>
+</param1>
+ <!--eta_0 of ExponentiatedGradient -->
+ <param2>
+  <name>eta0</name>
+  <type>float</type>
+  <min>0.01</min>
+  <max>1.0</max>
+  <def>0.2</def>
+</param2>
+ <!--run_linprog_step of ExpGradient -->
+ <param3>
+   <name>run_linprog_step</name>
+   <type>bool</type>
+   <min>0</min>
+   <max>1</max>
+   <def>1</def>
+ </param3>
+</inputs>
