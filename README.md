@@ -1,6 +1,11 @@
 # Fairness_Practices_Robustness_Testing
 
 This paper presents a causal framework for evaluating the robustness of machine learning fairness practices under distributional shifts. By generating neighboring datasets from causal models inferred via discovery algorithms, the approach tests whether common fairness interventions—such as dropping features, hyperparameter tuning, or bias mitigation—maintain fairness across variations in the data. Unlike prior work focused on fairness detection or optimization, our method systematically stress-tests fairness practices to identify those that are sensitive to changes in causal structure or data distribution. The framework is supported by an available tool and validated across six benchmark datasets, demonstrating that many fairness practices fail to generalize robustly.
+
+# Structure of the repository
+
+[Adult_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Adult_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Adult dataset.
+[Bank_Analysis]([https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Adult_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Bank_Analysis)): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Bank dataset.
 # Requirments
 Python Requirments:
 
