@@ -22,5 +22,6 @@ In this experiment, we study the robustness of in-processing fairness practices 
 To further understand the value of incorporating causal graphs, we conduct an ablation study where the same fairness evaluation is performed without using causal graphs. This baseline scenario is implemented in the script [RQ2_Ablation](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py), and the corresponding results are reported in Table 4.
 
 # RQ3
+We conduct a series of experiments tounderstand if some hyperparameters (HPs) can systematically influence fairness. [RQ#.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3.py) replicates the results reported in Table 6.  The results of this script is saved to ./{Dataset}_Analysis/RQ2/{dataset}_RQ3.npy. 
 
 # RQ4
