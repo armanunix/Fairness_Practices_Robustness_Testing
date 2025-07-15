@@ -48,3 +48,12 @@ To further understand the value of incorporating causal graphs, we conduct an ab
 We conduct a series of experiments tounderstand if some hyperparameters (HPs) can systematically influence fairness.We adopted an in-processing fairness mitigation tool from Tizpaz-Niari et al. [6], which is designed to explore the hyperparameter space of ML models using genetic algorithms to find configurations that yield fairer outcomes for a given dataset. This tool applies mutation operators to evolve candidate configurations and identify ones that minimize fairness violations according to a predefined metric [RQ#.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3.py) replicates the results reported in Table 6.  The results of this script is saved to ./{Dataset}_Analysis/RQ2/{dataset}_RQ3.npy. 
 
 # RQ4
+
+# Utility Functions
+
+Here we explain the functions we used to generate the overview plots and tables.
+[Distance_test.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Distance_test.py) evaluates our distance criteria on accepting real data sample. 
+[Overview_plots.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Overview_plots.ipynb) uses the results to generates the plots used in the paper.
+[RQ1&2_Results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ1%262_Results.ipynb) uses the results of RQ1 and RQ2 to generate LATEX code for the results reported in Table 2&3.
+[RQ3_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3_results.ipynb) uses the results of RQ3 to generate LATEX code for the results reported in Table 5.
+[RQ4_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ4_Results.ipynb) analyzes the results of RQ4 to generate LATEX code for the results reported in Table 7.
