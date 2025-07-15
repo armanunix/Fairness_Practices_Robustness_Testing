@@ -1,5 +1,28 @@
 # Fairness_Practices_Robustness_Testing
 
+This paper presents a causal framework for evaluating the robustness of machine learning fairness practices under distributional shifts. By generating neighboring datasets from causal models inferred via discovery algorithms, the approach tests whether common fairness interventions—such as dropping features, hyperparameter tuning, or bias mitigation—maintain fairness across variations in the data. Unlike prior work focused on fairness detection or optimization, our method systematically stress-tests fairness practices to identify those that are sensitive to changes in causal structure or data distribution. The framework is supported by an available tool and validated across six benchmark datasets, demonstrating that many fairness practices fail to generalize robustly.
+# Requirments
+Python Requirments:
+
+matplotlib==3.10.3
+
+scikit_learn==1.7.0
+
+tensorflow_probability==0.25.0
+
+pandas==2.3.1
+
+mahalanobis==1.2.0
+
+tensorflow==2.19.0
+
+R Requirments:
+
+pcalg==2.7-12
+
+rstan==2.32.7
+
+Rgraphviz==2.52.0
 
 #  Causal Discovery
 
@@ -22,6 +45,6 @@ In this experiment, we study the robustness of in-processing fairness practices 
 To further understand the value of incorporating causal graphs, we conduct an ablation study where the same fairness evaluation is performed without using causal graphs. This baseline scenario is implemented in the script [RQ2_Ablation](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py), and the corresponding results are reported in Table 4.
 
 # RQ3
-We conduct a series of experiments tounderstand if some hyperparameters (HPs) can systematically influence fairness. [RQ#.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3.py) replicates the results reported in Table 6.  The results of this script is saved to ./{Dataset}_Analysis/RQ2/{dataset}_RQ3.npy. 
+We conduct a series of experiments tounderstand if some hyperparameters (HPs) can systematically influence fairness.We adopted an in-processing fairness mitigation tool from Tizpaz-Niari et al. [6], which is designed to explore the hyperparameter space of ML models using genetic algorithms to find configurations that yield fairer outcomes for a given dataset. This tool applies mutation operators to evolve candidate configurations and identify ones that minimize fairness violations according to a predefined metric [RQ#.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3.py) replicates the results reported in Table 6.  The results of this script is saved to ./{Dataset}_Analysis/RQ2/{dataset}_RQ3.npy. 
 
 # RQ4
