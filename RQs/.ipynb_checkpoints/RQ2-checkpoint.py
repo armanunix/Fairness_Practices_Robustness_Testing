@@ -21,7 +21,7 @@ from sklearn.feature_selection import SelectKBest, SelectFpr,SelectPercentile
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, accuracy_score
-# from aif360.sklearn.metrics import equal_opportunity_difference,average_odds_difference
+from aif360.sklearn.metrics import equal_opportunity_difference,average_odds_difference
 import glob
 import re
 import argparse
@@ -126,7 +126,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, help='Select the dataset')
 args = parser.parse_args()
 dataset=args.dataset
-#dataset ='Bank'
+
 for dataset in [dataset]:
     if dataset == 'Adult':
         sens_index = 7
