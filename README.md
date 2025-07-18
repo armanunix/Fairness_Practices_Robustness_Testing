@@ -50,7 +50,18 @@ python Preparing_DAGs.py --dataset Bank --alg pc
 
 # Inferring the Weights of DAGs
 
-Having obtained the DAGs for all datasets and discovery algorithms, we then use probabilistic programming to infer the posterior distribution of the weights associated with each edge in the DAGs. To accomplish this, we use RSTAN. A Python script, [Py_2_R.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Py_2_R.py), takes a DAG as input and automatically generates the corresponding RStan probabilistic code. The generated .stan code is saved in the directory ./{Dataset}_Analysis/{DiscoveryAlgorithm}/PP/ using the naming convention {Dataset}_{DiscoveryAlgorithm}_{DAG}_{DAG number}.stan. Each generated STAN model is then executed using a dedicated R script located at ./{Dataset}_Analysis/Rstan_shell_{DAG number}.R, which runs the RStan code for the corresponding dataset, discovery algorithm, and DAG number. 
+Having obtained the DAGs for all datasets and discovery algorithms, we then use probabilistic programming to infer the posterior distribution of the weights associated with each edge in the DAGs. To accomplish this, we use RSTAN. A Python script, [Py_2_R.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Py_2_R.py), takes a DAG as input and automatically generates the corresponding RStan probabilistic code. Bellow command runs this script for Bank dataset using simy algorithm.
+```
+cd Probablistic_Programming
+python Py_2_R.py --dataset Bank --alg simy
+
+```
+The generated .stan code is saved in the directory ./{Dataset}_Analysis/{DiscoveryAlgorithm}/PP/ using the naming convention {Dataset}_{DiscoveryAlgorithm}_{DAG}_{DAG number}.stan. Each generated STAN model is then executed using a dedicated R script located at ./{Dataset}_Analysis/Rstan_shell_{DAG number}.R, which runs the RStan code for the corresponding dataset, discovery algorithm, and DAG number. Example bellow runs the Rstan file to infer the weights of the causal graph 58 of simy algorithm.
+```
+cd Bank_Analysis
+Rscript Rstan_simy_58.R
+
+```
 # RQ1
 
 In this experiment, we evaluate the quality of the generated data produced by each causal model to eliminate discovery algorithms that demonstrate a lower success rate compared to others. The Python script [RQ1.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ1.py) implements this evaluation. It leverages the inferred posterior weights for each DAG and dataset, which are saved in the format ./{Dataset}_Analysis/{DiscoveryAlgorithm}/PP/{Dataset}_{DiscoveryAlgorithm}_PP_{DAG number}.csv. The outcomes of this quality assessment, as reported in Table 1, are stored in ./{Dataset}_Analysis/RQ1/{Dataset}_{DiscoveryAlgorithm}_RQ1_results.npy. To benchmark the performance, we include two baseline models: one based on the corresponding DAGs with equal edge weights and another using randomly generated samples. These baselines are implemented in the Python script [RND_EQ.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RND_EQ.py). The results for the random sampling baseline are saved to ./{Dataset}_Analysis/RQ1_RND/{Dataset}_{DiscoveryAlgorithm}_RQ1_results_RND.npy, while the equal-weights baseline results are saved to ./{Dataset}_Analysis/RQ1_RND/{Dataset}_{DiscoveryAlgorithm}_RQ1_results_eq.npy.
