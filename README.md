@@ -7,6 +7,14 @@ This paper presents a causal framework for evaluating the robustness of machine 
 [Adult_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Adult_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Adult dataset.
 
 [Bank_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Bank_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Bank dataset.
+
+[Compas_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Compas_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Compas dataset.
+
+[Heart_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Hear_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Heart dataset.
+
+[Law_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Law_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Law dataset.
+
+[Student_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Student_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Students dataset.
 # Requirments
 Python Requirments:
 
@@ -66,6 +74,10 @@ cd Bank_Analysis
 Rscript Rstan_simy_58.R
 
 ```
+# Robustness Test
+
+
+
 # RQ1
 
 In this experiment, we evaluate the quality of the generated data produced by each causal model to eliminate discovery algorithms that demonstrate a lower success rate compared to others. The Python script [RQ1.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ1.py) implements this evaluation. It leverages the inferred posterior weights for each DAG and dataset, which are saved in the format ./{Dataset}_Analysis/{DiscoveryAlgorithm}/PP/{Dataset}_{DiscoveryAlgorithm}_PP_{DAG number}.csv. The outcomes of this quality assessment, as reported in Table 1, are stored in ./{Dataset}_Analysis/RQ1/{Dataset}_{DiscoveryAlgorithm}_RQ1_results.npy. To benchmark the performance, we include two baseline models: one based on the corresponding DAGs with equal edge weights and another using randomly generated samples. These baselines are implemented in the Python script [RND_EQ.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RND_EQ.py). The results for the random sampling baseline are saved to ./{Dataset}_Analysis/RQ1_RND/{Dataset}_{DiscoveryAlgorithm}_RQ1_results_RND.npy, while the equal-weights baseline results are saved to ./{Dataset}_Analysis/RQ1_RND/{Dataset}_{DiscoveryAlgorithm}_RQ1_results_eq.npy.
@@ -95,16 +107,21 @@ python RQ3.py --dataset Adult
 ```
 
 # RQ4
+We examine two well-established post-processing bias mitigation algorithms: Threshold Optimizer and Calibrated Equalized Odds. Our primary objective in this
+experiment is to analyze the robustness of these bias mitigation algorithms across different datasets. The python Script [RQ4.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQs/RQ4.py). The bellow command runs the robustness test for Threshold Optimizer (TO) on Adult dataset.
 
+```
+cd RQs
+python RQ4.py --dataset Adult --mitigator TO
+```
 # Utility Functions
 
 Here we explain the functions we used to generate the overview plots and tables.
-[Distance_test.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Distance_test.py) evaluates our distance criteria on accepting real data sample. 
 
-[Overview_plots.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Overview_plots.ipynb) uses the results to generates the plots used in the paper.
+[Overview_plots.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/Overview_plots.ipynb) uses the results to generates the plots used in the paper.
 
-[RQ1&2_Results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ1%262_Results.ipynb) uses the results of RQ1 and RQ2 to generate LATEX code for the results reported in Table 2&3.
+[RQ1&2_Results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/RQ1%262_Results.ipynb) uses the results of RQ1 and RQ2 to generate LATEX code for the results reported in Table 2&3.
 
-[RQ3_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3_results.ipynb) uses the results of RQ3 to generate LATEX code for the results reported in Table 5.
+[RQ3_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/RQ3_results.ipynb) uses the results of RQ3 to generate LATEX code for the results reported in Table 5.
 
-[RQ4_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ4_Results.ipynb) analyzes the results of RQ4 to generate LATEX code for the results reported in Table 7.
+[RQ4_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/RQ4_Results.ipynb) analyzes the results of RQ4 to generate LATEX code for the results reported in Table 7.
