@@ -30,6 +30,12 @@ mahalanobis==1.2.0
 
 tensorflow==2.10.0
 
+aif360==0.6.1
+
+shap==0.41.0
+
+fairlearn==0.7.0
+
 R Requirments:
 
 pcalg==2.7-12
@@ -38,11 +44,6 @@ rstan==2.32.7
 
 Rgraphviz==2.52.0
 
-aif360==0.6.1
-
-shap==0.41.0
-
-fairlearn==0.7.0
 
 #  Causal Discovery
 
