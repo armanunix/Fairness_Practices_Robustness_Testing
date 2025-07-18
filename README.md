@@ -76,11 +76,16 @@ In this experiments we study the robusteness of in processing fairness practices
 To better understand the utility of the causal grapghs, we study the same experminent in the absence of causal graphs. The .py script [RQ2_Ablation](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py) generates the results of the Ablation study reported in Table 4. This command runs RQ2 experiments for Bank dataset.
 ```
 cd RQs
-python RQ2.py --dataset Adult
+python RQ2.py --dataset Bank
 ```
 
 In this experiment, we study the robustness of in-processing fairness practices when applied to causally generated data. Specifically, we assess the sensitivity of fairness outcomes to the removal of sensitive and non-sensitive features. For non-sensitive feature removal, we evaluate three common selection methods: SelectKBest, SelectFpr, and SelectPercentile. The experiment is implemented in the Python script [RQ2.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2.py), and the results—reported in Table 3—are saved in the format ./{Dataset}_Analysis/RQ2/{DiscoveryAlgorithm}_{Fairness Practice}_EOD_{DAG number}.npy.
-To further understand the value of incorporating causal graphs, we conduct an ablation study where the same fairness evaluation is performed without using causal graphs. This baseline scenario is implemented in the script [RQ2_Ablation](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py), and the corresponding results are reported in Table 4.
+To further understand the value of incorporating causal graphs, we conduct an ablation study where the same fairness evaluation is performed without using causal graphs. This baseline scenario is implemented in the script [RQ2_Ablation.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py), and the corresponding results are reported in Table 4. The bellow command runs the ablation study for Bank dataset.
+
+```
+cd RQs
+python RQ2_Ablation.py --dataset Bank
+```
 
 # RQ3
 We conduct a series of experiments tounderstand if some hyperparameters (HPs) can systematically influence fairness.We adopted an in-processing fairness mitigation tool from Tizpaz-Niari et al. [6], which is designed to explore the hyperparameter space of ML models using genetic algorithms to find configurations that yield fairer outcomes for a given dataset. This tool applies mutation operators to evolve candidate configurations and identify ones that minimize fairness violations according to a predefined metric [RQ#.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3.py) replicates the results reported in Table 6.  The results of this script is saved to ./{Dataset}_Analysis/RQ2/{dataset}_RQ3.npy. 
