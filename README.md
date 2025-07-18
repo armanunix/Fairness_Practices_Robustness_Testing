@@ -74,6 +74,10 @@ cd Bank_Analysis
 Rscript Rstan_simy_58.R
 
 ```
+# Robustness Test
+
+
+
 # RQ1
 
 In this experiment, we evaluate the quality of the generated data produced by each causal model to eliminate discovery algorithms that demonstrate a lower success rate compared to others. The Python script [RQ1.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ1.py) implements this evaluation. It leverages the inferred posterior weights for each DAG and dataset, which are saved in the format ./{Dataset}_Analysis/{DiscoveryAlgorithm}/PP/{Dataset}_{DiscoveryAlgorithm}_PP_{DAG number}.csv. The outcomes of this quality assessment, as reported in Table 1, are stored in ./{Dataset}_Analysis/RQ1/{Dataset}_{DiscoveryAlgorithm}_RQ1_results.npy. To benchmark the performance, we include two baseline models: one based on the corresponding DAGs with equal edge weights and another using randomly generated samples. These baselines are implemented in the Python script [RND_EQ.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RND_EQ.py). The results for the random sampling baseline are saved to ./{Dataset}_Analysis/RQ1_RND/{Dataset}_{DiscoveryAlgorithm}_RQ1_results_RND.npy, while the equal-weights baseline results are saved to ./{Dataset}_Analysis/RQ1_RND/{Dataset}_{DiscoveryAlgorithm}_RQ1_results_eq.npy.
