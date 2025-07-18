@@ -96,7 +96,12 @@ python RQ3.py --dataset Adult
 
 # RQ4
 We examine two well-established post-processing bias mitigation algorithms: Threshold Optimizer and Calibrated Equalized Odds. Our primary objective in this
-experiment is to analyze the robustness of these bias mitigation algorithms across different datasets. The python Script 
+experiment is to analyze the robustness of these bias mitigation algorithms across different datasets. The python Script [RQ4.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQs/RQ4.py). The bellow command runs the robustness test for Threshold Optimizer (TO) on Adult dataset.
+
+```
+cd RQs
+python RQ4.py --dataset Adult --mitigator TO
+```
 # Utility Functions
 
 Here we explain the functions we used to generate the overview plots and tables.
