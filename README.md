@@ -40,7 +40,13 @@ cd Causal_Discovery
 Rscript Causal_discovery.R
 
 ```
-The next step is to prepare the possible Directed Acyclic Graphs (DAGs) from the CPDAG result for each discovery algorithm. The Python script [Preparing_DAGs.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Preparing_DAGs.py) reads the CPDAG corresponding to each dataset and causal discovery algorithm and generates all compatible DAGs. The output of this script is saved to ./{Dataset}_Analysis/{DiscoveryAlgorithm}/DAGs/ using the format {Dataset}_{DiscoveryAlgorithm}_{DAG}_{DAG number}.csv.
+The next step is to prepare the possible Directed Acyclic Graphs (DAGs) from the CPDAG result for each discovery algorithm. The Python script [Preparing_DAGs.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Preparing_DAGs.py) reads the CPDAG corresponding to each dataset and causal discovery algorithm and generates all compatible DAGs. The output of this script is saved to ./{Dataset}_Analysis/{DiscoveryAlgorithm}/DAGs/ using the format {Dataset}_{DiscoveryAlgorithm}_{DAG}_{DAG number}.csv. Bellow command runs the code for Bank dataset using PC algorithm.
+
+```
+cd Causal_Discovery
+python Preparing_DAGs.py --dataset Bank --alg pc
+
+```
 
 # Inferring the Weights of DAGs
 
