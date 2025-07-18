@@ -71,7 +71,13 @@ python RQ1.py --dataset Adult
 ```
 # RQ2
 
-In this experiments we study the robusteness of in processing fairness practices. We investigate the robustness of dropping sensitive parameter as we as dropping nonesensitive parameters (SelectKBest, SelectFpr, and SelectPercentile). The python scipt [RQ2.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2.py) stores the results repoted in Table3 to ./{Dataset}_Analysis/RQ2/{DiscoveryAlgorithm}_{Fairness Practice}_EOD_{DAG number}.npy. To better understand the utility of the causal grapghs, we study the same experminent in the absence of causal graphs. The .py script [RQ2_Ablation](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py) generates the results of the Ablation study reported in Table 4.
+In this experiments we study the robusteness of in processing fairness practices. We investigate the robustness of dropping sensitive parameter as we as dropping nonesensitive parameters (SelectKBest, SelectFpr, and SelectPercentile). The python scipt [RQ2.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2.py) stores the results repoted in Table 3 to ./{Dataset}_Analysis/RQ2/{DiscoveryAlgorithm}_{Fairness Practice}_EOD_{DAG number}.npy. 
+
+To better understand the utility of the causal grapghs, we study the same experminent in the absence of causal graphs. The .py script [RQ2_Ablation](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py) generates the results of the Ablation study reported in Table 4. This command runs RQ2 experiments for Bank dataset.
+```
+cd RQs
+python RQ2.py --dataset Adult
+```
 
 In this experiment, we study the robustness of in-processing fairness practices when applied to causally generated data. Specifically, we assess the sensitivity of fairness outcomes to the removal of sensitive and non-sensitive features. For non-sensitive feature removal, we evaluate three common selection methods: SelectKBest, SelectFpr, and SelectPercentile. The experiment is implemented in the Python script [RQ2.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2.py), and the results—reported in Table 3—are saved in the format ./{Dataset}_Analysis/RQ2/{DiscoveryAlgorithm}_{Fairness Practice}_EOD_{DAG number}.npy.
 To further understand the value of incorporating causal graphs, we conduct an ablation study where the same fairness evaluation is performed without using causal graphs. This baseline scenario is implemented in the script [RQ2_Ablation](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ2_Ablation.py), and the corresponding results are reported in Table 4.
