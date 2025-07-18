@@ -75,9 +75,8 @@ cd Bank_Analysis
 Rscript Rstan_simy_58.R
 
 ```
-# Robustness Testing Tool
 
-# Robustness Test
+# Fairness Practices Robustness Testing Tool
 The python file [Robustness_Test.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Robustness_Test.py) implements of our Fairness Practices Robusness Testing. To run the tool for the selected dataset (Adult, Bank, Compas, Law, Heart, and Student) and selcted practices ('SelectKBest', 'SelectFpr','SelectPercentile' ,'drop', 'TO', 'CEO', and 'HP'), argument --dataset selects the dataset to test and --practice selects the fairness practices to do robusteness test. Below comand runs the tool for Adult dataset and SelectKBest practice.
 
 
