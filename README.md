@@ -7,6 +7,14 @@ This paper presents a causal framework for evaluating the robustness of machine 
 [Adult_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Adult_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Adult dataset.
 
 [Bank_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Bank_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Bank dataset.
+
+[Compas_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Compas_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Compas dataset.
+
+[Heart_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Hear_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Heart dataset.
+
+[Law_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Law_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Law dataset.
+
+[Student_Analysis](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/tree/main/Student_Analysis): Keeps the results of the causal discovery, probablistic programming, and the RQ1-4 experiments for the Students dataset.
 # Requirments
 Python Requirments:
 
