@@ -105,12 +105,11 @@ python RQ4.py --dataset Adult --mitigator TO
 # Utility Functions
 
 Here we explain the functions we used to generate the overview plots and tables.
-[Distance_test.py](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Distance_test.py) evaluates our distance criteria on accepting real data sample. 
 
-[Overview_plots.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Overview_plots.ipynb) uses the results to generates the plots used in the paper.
+[Overview_plots.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/Overview_plots.ipynb) uses the results to generates the plots used in the paper.
 
-[RQ1&2_Results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ1%262_Results.ipynb) uses the results of RQ1 and RQ2 to generate LATEX code for the results reported in Table 2&3.
+[RQ1&2_Results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/RQ1%262_Results.ipynb) uses the results of RQ1 and RQ2 to generate LATEX code for the results reported in Table 2&3.
 
-[RQ3_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ3_results.ipynb) uses the results of RQ3 to generate LATEX code for the results reported in Table 5.
+[RQ3_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/RQ3_results.ipynb) uses the results of RQ3 to generate LATEX code for the results reported in Table 5.
 
-[RQ4_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/RQ4_Results.ipynb) analyzes the results of RQ4 to generate LATEX code for the results reported in Table 7.
+[RQ4_results.ipynb](https://github.com/armanunix/Fairness_Practices_Robustness_Testing/blob/main/Utils_Function/RQ4_Results.ipynb) analyzes the results of RQ4 to generate LATEX code for the results reported in Table 7.
