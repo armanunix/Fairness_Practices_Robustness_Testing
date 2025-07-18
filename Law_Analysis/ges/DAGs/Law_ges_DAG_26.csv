@@ -1,0 +1,6 @@
+,race,sex,LSAT,UGPA,first_pf
+race,0,0,0,1,1
+sex,1,0,1,1,0
+LSAT,1,0,0,1,0
+UGPA,0,0,0,0,0
+first_pf,0,0,1,1,0
